@@ -1,0 +1,8 @@
+streamlit==1.36.0
+pandas==2.2.2
+pytube==15.0.0
+moviepy==1.0.3
+openai-whisper==20240930
+scikit-learn==1.5.1
+numpy==1.26.4
+joblib==1.4.2
