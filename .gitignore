@@ -1,0 +1,50 @@
+Python :
+
+pycache/ 
+*.py[cod] 
+*$py.class 
+*.so
+
+Virtual environments : 
+
+venv/ 
+.env/ 
+env/ 
+*.env
+
+Pickle files (model files) :
+
+*.pkl
+
+Datasets :
+
+*.csv 
+
+
+Temporary files :
+
+*.log 
+*.tmp 
+*.temp
+
+Streamlit and Jupyter :
+
+.streamlit/ 
+.ipynb_checkpoints/
+
+MoviePy and Whisper temporary files :
+
+audio.mp3 
+*.mp4
+
+IDE and OS-specific files :
+
+.DS_Store 
+.vscode/ 
+.idea/
+
+Other
+
+*.bak 
+*.swp
+
