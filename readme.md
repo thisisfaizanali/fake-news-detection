@@ -4,167 +4,172 @@ Welcome to the Fake News Detection project! 🚀 This is a final-year project th
 
 ## Features
 
-Text Input 📝: Type in news text and get instant classification.
-Video Upload 🎥: Upload MP4 videos, extract audio, transcribe it, and classify the content.
-YouTube URL 🌐: Paste a YouTube link to download, transcribe, and classify the video’s content.
-Model Selection 🤖: Choose from four ML models:
-Logistic Regression
-Decision Tree
-Random Forest
-K-Nearest Neighbors (KNN)
-
-Explainability 🔎: See the top 5 words/phrases influencing the classification (for Logistic Regression and Random Forest).
-User-Friendly UI 🎨: Built with Streamlit for a seamless experience.
+- **Text Input 📝**: Type in news text and get instant classification.
+- **Video Upload 🎥**: Upload MP4 videos, extract audio, transcribe it, and classify the content.
+- **YouTube URL 🌐**: Paste a YouTube link to download, transcribe, and classify the video's content.
+- **Model Selection 🤖**: Choose from four ML models:
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - K-Nearest Neighbors (KNN)
+- **Explainability 🔎**: See the top 5 words/phrases influencing the classification (for Logistic Regression and Random Forest).
+- **User-Friendly UI 🎨**: Built with Streamlit for a seamless experience.
 
 ## Prerequisites 🛠️
 
-To run this project, you’ll need:
+To run this project, you'll need:
 
-Python 3.8+ 🐍
-A virtual environment (highly recommended) 🌍
-FFmpeg installed for video processing (see FFmpeg Installation) 📼
-The Full dataset.csv file for training models 📊
-Pre-trained model pickle files (e.g., LogisticRegressionmodel.pkl) 📦
+- Python 3.8+ 🐍
+- A virtual environment (highly recommended) 🌍
+- FFmpeg installed for video processing (see FFmpeg Installation) 📼
+- The `Full dataset.csv` file for training models 📊
+- Pre-trained model pickle files (e.g., `LogisticRegressionmodel.pkl`) 📦
 
 ## Installation 📦
 
-Clone the Repository:
+### Clone the Repository:
 
-```
+```bash
 git clone https://github.com/thisisfaizanali/fake-news-detection.git
 cd fake-news-detection
 ```
 
-## Set Up a Virtual Environment:
+### Set Up a Virtual Environment:
 
-```
+```bash
 python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-## Install Dependencies:
+### Install Dependencies:
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-## Add Dataset and Models:
+### Add Dataset and Models:
 
-Place Full dataset.csv in the project root (not included in Git due to size).
-Add pre-trained pickle files (e.g., LogisticRegressionmodel.pkl, etc.) to the project root. These are not in the repo but can be regenerated using modelo.ipynb or obtained from the project owner.
+- Place `Full dataset.csv` in the project root (not included in Git due to size).
+- Add pre-trained pickle files (e.g., `LogisticRegressionmodel.pkl`, etc.) to the project root. These are not in the repo but can be regenerated using `modelo.ipynb` or obtained from the project owner.
 
-## Run the App:
+### Run the App:
 
-```
+```bash
 streamlit run app.py
 ```
 
 ## Usage 🚀
 
-## Launch the App:
+### Launch the App:
 
-Run streamlit run app.py to open the Streamlit interface in your browser.
+Run `streamlit run app.py` to open the Streamlit interface in your browser.
 
-## Choose Input Type:
+### Choose Input Type:
 
-Select Text 📝, Video 🎥, or YouTube URL 🌐 from the sidebar.
+Select **Text 📝**, **Video 🎥**, or **YouTube URL 🌐** from the sidebar.
 
-## Pick a Model:
+### Pick a Model:
 
 Choose a model (Logistic Regression, Decision Tree, Random Forest, or KNN) from the sidebar.
 
-## Classify News:
+### Classify News:
 
-Text: Enter news text and click "Classify".
-Video: Upload an MP4 file to transcribe and classify.
-YouTube URL: Paste a YouTube link to download, transcribe, and classify.
+- **Text**: Enter news text and click "Classify".
+- **Video**: Upload an MP4 file to transcribe and classify.
+- **YouTube URL**: Paste a YouTube link to download, transcribe, and classify.
 
-## View Results:
+### View Results:
 
-See if the news is Real ✅ or Fake ❌, with probability scores.
-For Logistic Regression and Random Forest, check the top 5 influential words/phrases.
+- See if the news is **Real ✅** or **Fake ❌**, with probability scores.
+- For Logistic Regression and Random Forest, check the top 5 influential words/phrases.
 
 ## Project Structure 📂
 
+```
 fake-news-detection/
-├── app.py # Main Streamlit app for classification 🌟
-├── streamlitmain.py # Video transcription script 🎥
-├── yt_down_main.py # YouTube video transcription script 🌐
-├── modelo.ipynb # Jupyter notebook for model training 📓
-├── .gitignore # Excludes sensitive/large files 🚫
-├── README.md # You’re reading it! 📖
-├── requirements.txt # Python dependencies 📋
-├── Full dataset.csv # Dataset (not in Git) 📊
-└── \*.pkl # Pre-trained models (not in Git) 📦
+├── app.py                 # Main Streamlit app for classification 🌟
+├── streamlitmain.py       # Video transcription script 🎥
+├── yt_down_main.py        # YouTube video transcription script 🌐
+├── modelo.ipynb           # Jupyter notebook for model training 📓
+├── .gitignore             # Excludes sensitive/large files 🚫
+├── README.md              # You're reading it! 📖
+├── requirements.txt       # Python dependencies 📋
+├── Full dataset.csv       # Dataset (not in Git) 📊
+└── *.pkl                  # Pre-trained models (not in Git) 📦
+```
 
 ## Dataset 📊
 
-File: Full dataset.csv
-Description: Contains news articles labeled as 0 (Fake) or 1 (Real).
-Note: Excluded from the repository due to size. Contact the project owner or use a similar dataset. You can also regenerate it if you have access to the original sources.
+- **File**: `Full dataset.csv`
+- **Description**: Contains news articles labeled as 0 (Fake) or 1 (Real).
+- **Note**: Excluded from the repository due to size. Contact the project owner or use a similar dataset. You can also regenerate it if you have access to the original sources.
 
 ## Model Training 🧠
 
-Notebook: modelo.ipynb
-Purpose: Loads and preprocesses the dataset, trains four ML models, and saves them as pickle files (commented out in the notebook).
-Steps:
-Run modelo.ipynb to preprocess Full dataset.csv.
-Uncomment joblib.dump lines to save models as .pkl files.
-Use these models in app.py for classification.
+- **Notebook**: `modelo.ipynb`
+- **Purpose**: Loads and preprocesses the dataset, trains four ML models, and saves them as pickle files (commented out in the notebook).
+- **Steps**:
+  1. Run `modelo.ipynb` to preprocess `Full dataset.csv`.
+  2. Uncomment `joblib.dump` lines to save models as `.pkl` files.
+  3. Use these models in `app.py` for classification.
 
 ## Dependencies 📋
 
-See requirements.txt for the full list. Key packages include:
+See `requirements.txt` for the full list. Key packages include:
 
-streamlit 🎨: For the web interface
-pandas 📊: For data handling
-pytube 🌐: For YouTube video downloads
-moviepy 🎥: For video/audio processing
-whisper 🎙️: For audio transcription
-scikit-learn 🤖: For ML models
-numpy 🔢: For numerical operations
-joblib 📦: For model persistence
+- **streamlit 🎨**: For the web interface
+- **pandas 📊**: For data handling
+- **pytube 🌐**: For YouTube video downloads
+- **moviepy 🎥**: For video/audio processing
+- **whisper 🎙️**: For audio transcription
+- **scikit-learn 🤖**: For ML models
+- **numpy 🔢**: For numerical operations
+- **joblib 📦**: For model persistence
 
 Install them with:
+
+```bash
 pip install -r requirements.txt
+```
 
 ## FFmpeg Installation 🖥️
 
 FFmpeg is required for video/audio processing. Install it based on your OS:
 
-Windows:
-Download FFmpeg from ffmpeg.org.
-Extract the archive and add the bin folder to your system PATH.
-Verify with ffmpeg -version in your terminal.
+### Windows:
 
-MacOS:
+1. Download FFmpeg from [ffmpeg.org](https://ffmpeg.org).
+2. Extract the archive and add the `bin` folder to your system PATH.
+3. Verify with `ffmpeg -version` in your terminal.
 
-```
+### MacOS:
+
+```bash
 brew install ffmpeg
 ```
 
-Linux:
+### Linux:
 
-```
-sudo apt-get install ffmpeg # Ubuntu/Debian
-sudo yum install ffmpeg # CentOS/RHEL
+```bash
+sudo apt-get install ffmpeg  # Ubuntu/Debian
+sudo yum install ffmpeg      # CentOS/RHEL
 ```
 
 ## Notes ⚠️
 
-Pickle Files: Pre-trained models (e.g., LogisticRegressionmodel.pkl) are not in the repo due to size. Regenerate them with modelo.ipynb or contact the project owner.
-YouTube Downloads: Requires a stable internet connection and compliance with YouTube’s terms of service.
-Whisper Model: Uses the base model. Ensure sufficient memory for video processing.
-Virtual Environment: Strongly recommended to avoid dependency conflicts (see Installation).
+- **Pickle Files**: Pre-trained models (e.g., `LogisticRegressionmodel.pkl`) are not in the repo due to size. Regenerate them with `modelo.ipynb` or contact the project owner.
+- **YouTube Downloads**: Requires a stable internet connection and compliance with YouTube's terms of service.
+- **Whisper Model**: Uses the base model. Ensure sufficient memory for video processing.
+- **Virtual Environment**: Strongly recommended to avoid dependency conflicts (see Installation).
 
 ## Contributing 🤝
 
-Got ideas? 💡 Fork the repo, make changes, and submit a pull request! Follow PEP 8 guidelines and add clear comments. Let’s make this project even better! 🙌
+Got ideas? 💡 Fork the repo, make changes, and submit a pull request! Follow PEP 8 guidelines and add clear comments. Let's make this project even better! 🙌
 
 ## Acknowledgments 🙏
 
-Built as a final-year project to combat fake news 📰.
-Big thanks to the open-source communities behind Streamlit, Whisper, PyTube, and scikit-learn! ❤️
-Special shoutout to my friend who helped with the ML bits! 🤗
+- Built as a final-year project to combat fake news 📰.
+- Big thanks to the open-source communities behind Streamlit, Whisper, PyTube, and scikit-learn! ❤️
+- Special shoutout to my friend who helped with the ML bits! 🤗
 
 Happy classifying! 🎉
