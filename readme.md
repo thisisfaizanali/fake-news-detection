@@ -87,15 +87,16 @@ For Logistic Regression and Random Forest, check the top 5 influential words/phr
 ## Project Structure 📂
 
 fake-news-detection/
-├── app.py # Main Streamlit app for classification 🌟
-├── streamlitmain.py # Video transcription script 🎥
-├── yt_down_main.py # YouTube video transcription script 🌐
-├── modelo.ipynb # Jupyter notebook for model training 📓
-├── .gitignore # Excludes sensitive/large files 🚫
-├── README.md # You’re reading it! 📖
-├── requirements.txt # Python dependencies 📋
-├── Full dataset.csv # Dataset (not in Git) 📊
-└── \*.pkl # Pre-trained models (not in Git) 📦
+├── app.py                # Main Streamlit app for classification 🌟
+├── streamlitmain.py      # Handles video upload & transcription 🎥
+├── yt_down_main.py       # Downloads & transcribes YouTube videos 🌐
+├── modelo.ipynb          # Jupyter notebook for training ML models 📓
+├── .gitignore            # Specifies files/folders to ignore in Git 🚫
+├── README.md             # You're reading it! 📖
+├── requirements.txt      # Python dependencies 📋
+├── Full dataset.csv      # Dataset (excluded from Git repo) 📊
+└── *.pkl                 # Pre-trained ML model files (excluded) 📦
+
 
 ## Dataset 📊
 
