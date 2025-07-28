@@ -87,7 +87,6 @@ Choose a model (Logistic Regression, Decision Tree, Random Forest, or KNN) from 
 
 ```
 fake-news-detection/
-<<<<<<< HEAD
 ├── app.py                 # Main Streamlit app for classification 🌟
 ├── streamlitmain.py       # Video transcription script 🎥
 ├── yt_down_main.py        # YouTube video transcription script 🌐
@@ -98,18 +97,6 @@ fake-news-detection/
 ├── Full dataset.csv       # Dataset (not in Git) 📊
 └── *.pkl                  # Pre-trained models (not in Git) 📦
 ```
-=======
-├── app.py                # Main Streamlit app for classification 🌟
-├── streamlitmain.py      # Handles video upload & transcription 🎥
-├── yt_down_main.py       # Downloads & transcribes YouTube videos 🌐
-├── modelo.ipynb          # Jupyter notebook for training ML models 📓
-├── .gitignore            # Specifies files/folders to ignore in Git 🚫
-├── README.md             # You're reading it! 📖
-├── requirements.txt      # Python dependencies 📋
-├── Full dataset.csv      # Dataset (excluded from Git repo) 📊
-└── *.pkl                 # Pre-trained ML model files (excluded) 📦
-
->>>>>>> 91ebb8c07493b849632b032f2922c24c8c0f46c7
 
 ## Dataset 📊
 
